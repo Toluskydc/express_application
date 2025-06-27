@@ -1,14 +1,16 @@
 const express = require("express")
 
-const {getUser, createUser, updateUser, deleteUser, loginUser} = require("../controllers/user.controllers")
+const {getUser, getUserById, createUser, updateUser, deleteUser, loginUser} = require("../controllers/user.controllers")
+const authentication = require("../middlewares/auth.middlewares")
 
 const route = express.Router()
 
 
-route.get("/", getUser)
+route.get("/users", getUser)
 
+route.get("/user", authentication, getUserById)
 
-route.post("/", createUser)
+route.post("/users", createUser)
 
 
 route.post("/login-user", loginUser)

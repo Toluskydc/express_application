@@ -1,5 +1,8 @@
 const express = require("express");
+const cookieParser = require("cookie-parser");
 const userRoutes = require("./routes/user.route");
+const postRoutes = require("./routes/post.route");
+const kycRoutes = require("./routes/kyc.route");
 
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
@@ -15,10 +18,13 @@ mongoose
 
 // Middleware
 app.use(express.json());
+app.use(cookieParser());
 
 
 // creating endpoint for the student database manipulation
 app.use(userRoutes);
+app.use(postRoutes);
+app.use(kycRoutes);
 
 
 app.listen(4000, () => {
