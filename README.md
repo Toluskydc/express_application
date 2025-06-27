@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 # Blog Post Project: User Authentication, KYC, and Post Management
 
@@ -45,4 +46,5 @@ Start the server using:
 npm start
 ```
 
-The server will run on `http://localhost:5000`.
+The server will run on `http://localhost:4000`.
+
