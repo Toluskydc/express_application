@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 
 # Blog Post Project: User Authentication, KYC, and Post Management
 
